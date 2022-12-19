@@ -3,9 +3,10 @@ import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
-import WelcomeScreen from "./WelcomeScreen";
+import Welcome from "./Welcome";
 import LoginScreen from "./LoginScreen";
 import RegisterScreen from "./RegisterScreen";
+import HomeScreen from "./HomeScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,9 +14,9 @@ const NavigatorScreen = () => {
     return(
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Welcome">
-                <Stack.Screen
+            <Stack.Screen
                     name="Welcome" 
-                    component={WelcomeScreen}
+                    component={Welcome}
                     options={{ headerShown: false, animation: "slide_from_right" }}>
                 </Stack.Screen>
                 <Stack.Screen
