@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { View, Text, TextInput, Pressable, Image, ScrollView } from "react-native";
 import { Formik } from "formik";
-import {loginValidationSchema} from "../validations/validationSchema"
+import {loginValidationSchema} from "../../validations/validationSchema"
 import Fontisto from "@expo/vector-icons/Fontisto"
 import Feather from "@expo/vector-icons/Feather"
 
@@ -93,12 +93,12 @@ const RegisterScreen = ({navigation}) => {
             <View className='flex-row mt-[24px] justify-around'>
 
                 <Pressable className='bg-blue-500 p-[16px] mr-4 wx-15 rounded-sm  basis-1/2 items-center flex-row justify-center' onPress={()=> navigation.push('Register')}>
-                    <Image alt='facebook' source={require('../../assets/images/facebook.png')} className='w-[18px] h-[18px]'></Image>
+                    <Image alt='facebook' source={require('../../../assets/images/facebook.png')} className='w-[18px] h-[18px]'></Image>
                     <Text className='ml-[8px] text-center text-white font-[LatoRegular] '>FACEBOOK</Text>
                 </Pressable>
 
                 <Pressable className='p-[16px] rounded-sm bg-gray-100 basis-1/2 items-center flex-row justify-center' onPress={()=> navigation.push('Register')}>
-                    <Image alt='facebook' source={require('../../assets/images/google.png')} className='w-[18px] h-[18px]'></Image>
+                    <Image alt='facebook' source={require('../../../assets/images/google.png')} className='w-[18px] h-[18px]'></Image>
                     <Text className='ml-[8px] text-center text-gray-600 font-[LatoRegular] '>GOOGLE</Text>
                 </Pressable>
 

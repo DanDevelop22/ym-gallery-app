@@ -1,8 +1,9 @@
 import React from "react";
 import { View, Text, Pressable } from "react-native";
-import NavigatorScreen from "./src/screens/NavigatorScreen";
+import NavigatorScreen from "./src/components/screens/NavigatorScreen";
 import {useFonts} from 'expo-font';
-
+import { Provider } from "react-redux";
+import store from "./src/store/store";
 
 import { NativeWindStyleSheet } from "nativewind";
 
@@ -26,9 +27,11 @@ const App = () => {
   }
 
   return(
-    <View className='flex-1 bg-white'>
-      <NavigatorScreen/>
-    </View>
+    <Provider store={store}>
+      <View className='flex-1 bg-white'>
+        <NavigatorScreen/>
+      </View>
+    </Provider>
   )
 }
 

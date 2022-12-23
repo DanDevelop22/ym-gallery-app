@@ -9,19 +9,19 @@ const Welcome = ({navigation}) => {
             <View className='items-center flex flex-row basis-2/4'>
                
                 <Image alt='image1' 
-                    source={require('../../assets/images/welcome.png')} 
+                    source={require('../../../assets/images/welcome.png')} 
                     resizeMode='cover' 
                     className='basis-1/3 m-[1px] rounded-lg'
                 ></Image>
 
                 <Image alt='image2' 
-                    source={require('../../assets/images/welcome2.png')} 
+                    source={require('../../../assets/images/welcome2.png')} 
                     resizeMode='cover' 
                     className='basis-1/3 m-[1px] h-[320px] rounded-lg'
                 ></Image>
 
                 <Image alt='image3' 
-                    source={require('../../assets/images/welcome3.png')} 
+                    source={require('../../../assets/images/welcome3.png')} 
                     resizeMode='cover' 
                     className='basis-1/3 m-[1px] rounded-lg'
                 ></Image>
