@@ -10,17 +10,17 @@ const initialParams = {
     password: "usuario24$",
 };
 
-const LoginScreen = ({navigation}) => {
+const Register = ({navigation}) => {
 
     const [secureTextPassword, setSecureTextPassword] = useState(false)
 
     return(
-        <ScrollView className='bg-[#F4FFFD] flex py-24'>
+        <ScrollView className='bg-[#F4FFFD] flex py-16'>
         <View className='flex-1 px-5'>
 
             <View>
-                <Text className=' text-gray-700 text-center text-3xl font-[UnboundedRegular]'>Bienvenido.</Text>
-                <Text className=' text-center text-gray-500 text-sm font-[LatoRegular]'>Por favor inicie sesion</Text>
+                <Text className=' text-gray-700 text-center text-3xl font-[UnboundedRegular]'>Crear usuario.</Text>
+                <Text className=' text-center text-gray-500 text-sm font-[LatoRegular]'>Por favor complete los espacios para continuar</Text>
             </View>
 
             <Formik
@@ -56,22 +56,28 @@ const LoginScreen = ({navigation}) => {
                     return (
                         <View>
                             <View className='flex-row items-center mt-[16px]'>
+                                <TextInput placeholder="Escriba su nombre completo" placeholderTextColor={'gray'} color='gray' className='bg-gray-100 rounded-sm p-[16px] w-full font-[LatoRegular]'></TextInput>
+                                <View className='absolute right-0 p-[16px]'>
+                                    <Feather name='user' size={15} color='gray' />
+                                </View>
+                            </View>
+
+                            <View className='flex-row items-center mt-[16px]'>
                                 <TextInput placeholder="Escriba su correo electrónico" placeholderTextColor={'gray'} color='gray' className='bg-gray-100 rounded-sm p-[16px] w-full font-[LatoRegular]'></TextInput>
                                 <View className='absolute right-0 p-[16px]'>
                                     <Fontisto name='email' size={15} color='gray' />
                                 </View>
                             </View>
+
                             <View className='flex-row items-center mt-[16px]'>
                                 <TextInput secureTextEntry={!secureTextPassword} color='gray' placeholder="*************"  className='bg-gray-100 rounded-sm p-[16px] w-full font-[LatoRegular]'></TextInput>
                                 <Pressable className='absolute right-0 p-[16px]' onPress={() => setSecureTextPassword(!secureTextPassword) }>
                                     <Feather name={secureTextPassword? 'eye-off' : 'eye'} size={15} color='gray' />
                                 </Pressable>
                             </View>
-                            <Pressable className='w-full py-[16px]' onPress={() => navigation.push("RecoverPass")}>
-                                <Text className='text-right font-[LatoRegular]'>¿Ha olvidado su contraseña?</Text>
-                            </Pressable>
-                            <Pressable className='bg-[#FA9F42] rounded-sm' onPress={() => navigation.push("HomeScreen")}>
-                                <Text className='text-center text-sm text-white py-[16px] font-[LatoRegular]'>Iniciar Sesión</Text>
+
+                            <Pressable className='bg-[#FA9F42] rounded-sm mt-8'>
+                                <Text className='text-center text-sm text-white py-[16px] font-[LatoRegular]'>Registrar usuario</Text>
                             </Pressable>
                         </View>
                     )
@@ -80,7 +86,7 @@ const LoginScreen = ({navigation}) => {
 
             <View className='flex-row justify-between items-center mt-[32px]'>
                 <View className='border border-gray-400 w-[71px]'></View>
-                <Text className='font-[LatoRegular] text-gray-500 uppercase'>Puede continuar con</Text>
+                <Text className='font-[LatoRegular] text-gray-500 uppercase'>Puede registrarse con</Text>
                 <View className='border w-[71px]  border-gray-400'></View>
             </View>
 
@@ -99,9 +105,9 @@ const LoginScreen = ({navigation}) => {
             </View>
 
             <Pressable className='my-[24px] flex-row flex-wrap justify-center'>
-                    <Text className='font-[LatoRegular]  text-gray-600'>¿Aun no tiene un usuario? </Text>
-                    <Pressable onPress={() => navigation.push("Register")}>
-                    <Text className='font-[LatoRegular]  text-[#FA9F42] uppercase'>Registrese</Text>
+                    <Text className='font-[LatoRegular]  text-gray-600'>¿Ya tiene un usuario? </Text>
+                    <Pressable onPress={() => navigation.push("Login")}>
+                    <Text className='font-[LatoRegular]  text-[#FA9F42] uppercase'>Inicie Sesion</Text>
                     </Pressable>
             </Pressable>
 
@@ -110,4 +116,4 @@ const LoginScreen = ({navigation}) => {
     )
 }
 
-export default LoginScreen
+export default Register

@@ -4,8 +4,9 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
 import Welcome from "./Welcome";
-import LoginScreen from "./LoginScreen";
-import RegisterScreen from "./RegisterScreen";
+import Onboarding from "./Onboarding";
+import Login from "./Login";
+import Register from "./Register";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,13 +20,19 @@ const NavigatorScreen = () => {
                     options={{ headerShown: false, animation: "slide_from_right" }}>
                 </Stack.Screen>
                 <Stack.Screen
-                    name="Login"
-                    component={LoginScreen}
+                    name="Onboarding"
+                    component={Onboarding}
                     options={{ headerShown: false, animation: "slide_from_right" }}
                 />
                 <Stack.Screen
+                    name="Login"
+                    component={Login}
+                    options={{ headerShown: false, animation: "slide_from_right" }}
+                />
+               
+                <Stack.Screen
                     name="Register"
-                    component={RegisterScreen}
+                    component={Register}
                     options={{ headerShown: false, animation: "slide_from_right" }}
                 />
             </Stack.Navigator>
