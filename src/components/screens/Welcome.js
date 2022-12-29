@@ -34,11 +34,11 @@ const Welcome = ({ navigation }) => {
                 <Text className='text-gray-100 text-center text-2xl font-[UnboundedMedium]'>
                     YM GALLERY
                 </Text>
-                <Text className='text-gray-400 text-sm text-center font-[LatoRegular]'>
+                <Text className='text-gray-400 text-sm text-center font-[LatoRegular] mt-[16]'>
                     Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown
                 </Text>
-                <TouchableOpacity className='w-full bg-primary py-5 rounded-sm mt-6' onPress={() => navigation.replace('Onboarding')}>
-                    <Text className='text-gray-100 text-center uppercase font-[LatoRegular]'>
+                <TouchableOpacity className='w-full bg-orange-400 py-5 rounded-sm mt-6' onPress={() => navigation.replace('Onboarding')}>
+                    <Text className='text-gray-100 text-center font-[LatoRegular]'>
                         Comenzar
                     </Text>
                 </TouchableOpacity>

@@ -40,7 +40,7 @@ const Register = ({ navigation }) => {
                                 .then((response) => {
                                     console.log(response)
                                     var data = response.data;
-                                    //navigation.navigate("Home");
+                                    navigation.replace("Tabs");
                                 })
                                 .catch((error) => {
                                     console.log(error)
