@@ -1,6 +1,6 @@
 import { Dimensions } from "react-native"
 
-export const serverApi = 'https://ymgalleryserver.azurewebsites.net/api'
+export const serverApi = 'https://ymgalleryserver.azurewebsites.net/api/'
 
 const {width, height} = Dimensions.get('window')
 

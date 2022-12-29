@@ -1,13 +1,17 @@
 import axios from "axios";
 import { serverApi } from '../constants/constants'
-import PropTypes from 'prop-types';
 
 axios.defaults.baseURL = serverApi
+const headers =
+{
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+}
 
 export const login = async (body) => {
-    await axios.post('/auth/login/', body)
+   return await axios.post('auth/login/', body)
 }
 
 export const register = async (body) => {
-    await axios.post('/auth/register/', body)
+   return await axios.post('auth/register/', body)
 }

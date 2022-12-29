@@ -11,8 +11,8 @@ export const loginValidationSchema = yup.object().shape({
         .required("Contraseña es requerida")
 })
 
-export const RegisterValidationSchema = yup.object().shape({
-    username: yup
+export const registerValidationSchema = yup.object().shape({
+    name: yup
         .string()
         .required(),
     email: yup
@@ -22,8 +22,4 @@ export const RegisterValidationSchema = yup.object().shape({
     password: yup
         .string()
         .required("Contraseña es requerida"),
-    confirmPassword: yup
-        .string()
-        .required("Contraseña es requerida")
-        .oneOf([yup.ref('password'), null], 'Las contraseñas deben coincidir')
 })

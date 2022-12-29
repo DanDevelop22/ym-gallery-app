@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const User = {
     name: PropTypes.string,
     email: PropTypes.string,
-    photo: PropTypes.string,
+    img: PropTypes.string,
     token: PropTypes.string,
 }
 
