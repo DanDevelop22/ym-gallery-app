@@ -5,6 +5,8 @@ import {useFonts} from 'expo-font';
 import { Provider } from "react-redux";
 import store from "./src/store/store";
 
+import Tabs from "./src/components/tabs";
+
 import { NativeWindStyleSheet } from "nativewind";
 
 NativeWindStyleSheet.setOutput({

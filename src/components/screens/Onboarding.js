@@ -65,8 +65,8 @@ const Onboarding = ({ navigation }) => {
 
     return (
         <SafeAreaView className='flex-1 bg-white'>
-            <View className='flex-1'>
-                <View className='flex-row p-[24]'>
+            <View className='flex-1 mt-5' >
+                <View className='flex-row p-[24]  justify-center'>
                     <Text className='font-[UnboundedMedium] text-xl'>YM GALLERY</Text>
                 </View>
                 <Animated.FlatList
@@ -127,6 +127,7 @@ const Onboarding = ({ navigation }) => {
                                 width: 150,
                                 borderRadius: 3
                             }}
+                            
 
                                 onPress={() => {
                                     let index = Math.ceil(Number(scrollX._value / width))

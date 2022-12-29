@@ -15,11 +15,11 @@ const Register = ({navigation}) => {
     const [secureTextPassword, setSecureTextPassword] = useState(false)
 
     return(
-        <ScrollView className='bg-[#F4FFFD] flex py-16'>
+        <ScrollView className='bg-[#F4FFFD] flex py-24'>
         <View className='flex-1 px-5'>
 
             <View>
-                <Text className=' text-gray-700 text-center text-3xl font-[UnboundedRegular]'>Crear usuario.</Text>
+                <Text className=' text-gray-700 text-center text-3xl font-[LatoBold]'>Crear usuario.</Text>
                 <Text className=' text-center text-gray-500 text-sm font-[LatoRegular]'>Por favor complete los espacios para continuar</Text>
             </View>
 
@@ -76,7 +76,7 @@ const Register = ({navigation}) => {
                                 </Pressable>
                             </View>
 
-                            <Pressable className='bg-[#FA9F42] rounded-sm mt-8'>
+                            <Pressable className='bg-primary rounded-sm mt-8'>
                                 <Text className='text-center text-sm text-white py-[16px] font-[LatoRegular]'>Registrar usuario</Text>
                             </Pressable>
                         </View>
@@ -86,7 +86,7 @@ const Register = ({navigation}) => {
 
             <View className='flex-row justify-between items-center mt-[32px]'>
                 <View className='border border-gray-400 w-[71px]'></View>
-                <Text className='font-[LatoRegular] text-gray-500 uppercase'>Puede registrarse con</Text>
+                <Text className='font-[LatoRegular] text-gray-500'>Puede registrarse con</Text>
                 <View className='border w-[71px]  border-gray-400'></View>
             </View>
 
@@ -94,12 +94,12 @@ const Register = ({navigation}) => {
 
                 <Pressable className='bg-blue-500 p-[16px] mr-4 wx-15 rounded-sm  basis-1/2 items-center flex-row justify-center' onPress={()=> navigation.push('Register')}>
                     <Image alt='facebook' source={require('../../../assets/images/facebook.png')} className='w-[18px] h-[18px]'></Image>
-                    <Text className='ml-[8px] text-center text-white font-[LatoRegular] '>FACEBOOK</Text>
+                    <Text className='ml-[8px] text-center text-white font-[LatoRegular] '>Facebook</Text>
                 </Pressable>
 
                 <Pressable className='p-[16px] rounded-sm bg-gray-100 basis-1/2 items-center flex-row justify-center' onPress={()=> navigation.push('Register')}>
                     <Image alt='facebook' source={require('../../../assets/images/google.png')} className='w-[18px] h-[18px]'></Image>
-                    <Text className='ml-[8px] text-center text-gray-600 font-[LatoRegular] '>GOOGLE</Text>
+                    <Text className='ml-[8px] text-center text-gray-600 font-[LatoRegular] '>Google</Text>
                 </Pressable>
 
             </View>
@@ -107,7 +107,7 @@ const Register = ({navigation}) => {
             <Pressable className='my-[24px] flex-row flex-wrap justify-center'>
                     <Text className='font-[LatoRegular]  text-gray-600'>¿Ya tiene un usuario? </Text>
                     <Pressable onPress={() => navigation.push("Login")}>
-                    <Text className='font-[LatoRegular]  text-[#FA9F42] uppercase'>Inicie Sesion</Text>
+                    <Text className='font-[LatoBold]  text-primary'>Inicie Sesión</Text>
                     </Pressable>
             </Pressable>
 
